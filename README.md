@@ -61,6 +61,14 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q2_student_test
 ```
 
+Time Complexity Analysis:
+
+Since priority queue is implemented bt heap. So, every push requries a trickle up, which takes O(lgn) in the worst case. So the psuh all the elemtns needs O(nlgn).
+
+Then, we pop all the elements and stores into the vector. Every pop requires a trickle down, which also takes O(lgn) in the worst case. So pop all the elements requries O(nlgn).
+
+Hence, the total time is O(nlgn + nlgn) = O(nlgn)
+
 ## Question 3 (20 Points. Easy)
 
 Write a function ```int findKthSmallest(const vector<vector<int>> &input, int k)``` that finds the kth smallest element among all elements in all vectors and returns that value.
@@ -82,6 +90,14 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q3_student_test
 ```
 
+Run Time Analysis:
+
+Suppose we have total n elements inside the input. Since priority queue here is implemeted by heap, push all the elements into priority queue requires O(nlgn).
+
+For the pop process, in the worst case, we need to pop all the elements out to the the largest value, which takes O(nlgn).
+
+As a result, the total run time in the worst case is O(nlgn + nlgn) = O(nlgn)
+
 ## Question 4 (20 Points. Easy)
 
 We learn a few sorting algorithms in lecture, and picture below shows the order of dividing and merging in MergeSort:
@@ -98,4 +114,4 @@ To get full credit, you need to
 You can either attach an image OR text representation of your solution.
 
 Ans:
-
+The process and run time analysis are shown in a .png file.
